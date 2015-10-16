@@ -68,11 +68,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4">
-					<div class="painel painel-default">
+					<div class="panel panel-success">
 						<div class="panel-heading">
 							<h2 class="painel-title">Sua compra</h2>
 						</div>
-						<div class="painel-body">
+						<div class="panel-body">
 							<img src="img/produto.png" alt="Produto" class="img-responsive img-thumbnail"/>
 							<dl>
 								<dt>Nome</dt>
@@ -91,7 +91,66 @@
 					</div>
 				</div>
 				<div class="col-sm-8">
-					
+					<form>
+						<!-- INFORMAÇÕES DO USER -->
+						<fieldset>
+						<legend>Informações do usuário</legend>
+							<div class="form-group">
+								<label for="nome">Nome Completo</label>
+								<input id="nome" class="form-control" type="text">
+							</div>
+							<div class="form-group">
+								<label for="email">E-mail</label>
+								<div class="input-group">
+									<span class="input-group-addon">@</span>
+									<input id="email" class="form-control" type="email">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="cpf">C.P.F</label>
+								<input id="cpf" class="form-control" type="text">
+							</div>
+
+							<div class="checkbox">
+								<label for="novidades">
+									<input id="novidades" type="checkbox" value="sim" checked="checked">
+									Quero receber novidades por e-mail.
+								</label>
+							</div>
+						</fieldset>
+
+						<!-- FORMAS DE PAGAMENTO -->
+						<fildset>
+							<legend>Formas de pagamento</legend>
+							<div class="form-group">
+								<label for="bandeira">Bandeira do cartão</label>
+								<select name="bandeira" id="bandeira" class="form-control">
+									<option value="visa">Visa</option>
+									<option value="mastercard">MasterCard</option>
+									<option value="American">American Express</option>
+								</select>
+
+								<div class="form-group">
+									<label for="num">Número</label>
+									<input id="num" type="text" class="form-control">
+								</div>
+
+								<div class="form-group">
+									<label for="validade">Valdiade</label>
+									<input type="month" class="form-control">
+								</div>
+
+								<div class="form-group">
+									<label for="cvv">CVV</label>
+									<input type="text" maxlength="3" class="form-control">
+								</div>
+							</div>
+							<button class="btn btn-success btn-lg" type="submit">
+							<span class="glyphicon glyphicon-thumbs-up"></span>
+								Comprar
+							</button>
+						</fildset>
+					</form>
 				</div>
 			</div>
 		</div>
